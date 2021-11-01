@@ -6,7 +6,7 @@ To create a binary classifier DeepLearning Neural Network Model that is capable 
 ### Results
 - Data Preprocessing
   - Variable considered the target in model: "IS_SUCCESFUL", as the goal is to predict based on features if funding was used effectively which is categorized under the column IS_SUCCESSFUL
-  - Variables considered to be the features in the model: APPLICATION_TYPE AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT. SPECIAL_CONSIDERATIONS, and ASK_AMT were all used as features. 
+  - Variables considered to be the features in the model: APPLICATION_TYPE AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATIONS, and ASK_AMT were all used as features. 
   - Variables neither targets nor features, and removed from the input: "EID" & "NAME" are not features as they are both identification columns. However, in the 3rd optimization model ran, I pulled "STATUS" out from being a feature, as without know more than was explained on this dataset, I do not see how the active or in-active status of funding would matter in predicting success. 
 - Compiling, Training, and Evaluating the Model
   - Neurons, layers, and activation functions used in neural network model, and why:
@@ -29,7 +29,7 @@ To create a binary classifier DeepLearning Neural Network Model that is capable 
 ## Summary: 
 Overall there were slight improvements in each model either in accuracy, reduction of loss or both. The first optimization model had the lowest loss of all models, the third optimization model had the best accuracy of all the models, the second optimization model had slightly better accuracy than the original model but has a higher loss matrix. If aiming for least lost, and higher accuracy the first optimization model is probably the best to go with. 
 
-Given the 75% accuracy goal was not met further analysis and model testing should be done. Perhaps using the first optimization model with the tweaked data used in the third model would lead to better accuracy and loss scores. Knowing more about the data would also make it easier to know what data was 'noisy' but the vague definitions given made that hard to access. 
+Given the 75% accuracy goal was not met further analysis and model testing should be done. Perhaps, using the first optimization model with the tweaked data used in the third model would lead to better accuracy and loss scores. Knowing more about the data would also make it easier to know what data was 'noisy' but the vague definitions given made that hard to access. 
 
-Another way to imporve accuracy would be to try a completely different model. Given the data as it is and looking for a binary prediction result a RandomForests or SVMs supervised learning model might be a better use on this data as both tend to have higher accuracy than DeepLearning Models and both are slightly more interpretable.
+Another way to imporve accuracy would be to try a completely different machine learning model. Given the data as it is, and the aim of a binary prediction result either a RandomForests, or SVM model might be a better to use on this data as both tend to have higher accuracy than the nerual network models used, and both are slightly more interpretable.
 
